@@ -1,0 +1,456 @@
+﻿@model List<ExhibitProductCategoryViewModel>
+<!-- Swiper-->
+<section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true">
+    <div class="swiper-wrapper context-dark text-center">
+        <div class="swiper-slide" data-slide-bg="eximani-images/nu-tram-huong-slide1.jpg">
+            <div class="swiper-slide-caption section-md">
+                <div class="container">
+                    <h1 style="font-size: 36px" class="swiper-title-3" data-caption-animate="fadeInLeft" data-caption-delay="200">CHÀO MỪNG ĐẾN ICHI HANDMADE</h1>
+                    <h1 class="swiper-title-1" data-caption-animate="fadeScale" data-caption-delay="100" style=" font-size: 55px;font-weight: 600">
+                        SẢN PHẨM 100% TỰ NHIÊN
+                    </h1>
+                    @*<h3 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">Grown with Us</h3>*@
+                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300"><a class="button button-lg button-shadow-3 button-secondary button-zakaria" asp-controller="EximaniContact" asp-action="Index">LIÊN HỆ NGAY</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" data-slide-bg="eximani-images/ichi-handemade-xa-bong-1-slide2.jpg">
+            <div class="swiper-slide-caption section-md">
+                <div class="container">
+                    <h4 class="swiper-title-3" data-caption-animate="fadeInLeft" data-caption-delay="200">SẢN PHẨM CHẤT LƯỢNG</h4>
+                    <h1 class="swiper-title-1" data-caption-animate="fadeScale" data-caption-delay="100">GIÁ CẠNH TRANH</h1>
+                    <h3 class="swiper-title-2" data-caption-animate="fadeInRight" data-caption-delay="200">TỐT CHO SỨC KHỎE</h3>
+                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300"><a class="button button-lg button-shadow-3 button-secondary button-zakaria" asp-controller="EximaniContact" asp-action="Index">LIÊN HỆ NGAY</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" data-slide-bg="eximani-images/ichi-handemade-xa-bong-2-slide3.jpg">
+            <div class="swiper-slide-caption section-md">
+                <div class="container">
+                    <h4 class="swiper-title-3" data-caption-animate="fadeInLeft" data-caption-delay="200">
+                        PHƯƠNG CHÂM CỦA ICHI HANDEMADE:
+                    </h4>
+                    <h2 class="swiper-title-1" data-caption-animate="fadeScale" data-caption-delay="100">
+                        “AN TOÀN SỨC KHỎE, THÂN THIỆN MÔI TRƯỜNG”
+                    </h2>
+                    <div class="button-wrap" data-caption-animate="fadeInUp" data-caption-delay="300"><a class="button button-lg button-shadow-3 button-secondary button-zakaria" asp-controller="EximaniContact" asp-action="Index">LIÊN HỆ NGAY</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper Pagination-->
+    <div class="swiper-pagination"></div>
+    <!-- Swiper Navigation-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</section>
+<!-- About Us-->
+<section class="section section-inset-2 bg-default text-md-left">
+    <div class="container">
+        <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-sm-6 col-md-5 col-lg-6 wow fadeInLeft" style="display: flex;justify-content: center; align-items: center">
+                <img src="~/eximani-images/logo-cua-ichi-handmade.jpg" alt="ichihandmade-logo" style="width:90%" />
+            </div>
+            <div class="col-md-7 col-lg-6 col-xl-5">
+                <h4 class="title-style-1 wow fadeInRight">Đôi lời về Ichi Handmade</h4>
+                <h2 class="wow fadeInRight" data-wow-delay=".1s">About us</h2>
+                <p class="offset-top-md-20 wow fadeInRight" data-wow-delay=".2s">Chúng tôi - ICHI HANDE MADE chuyên cung cấp các sản phẩm như nụ trầm hương, xà bông được làm 100% tự nhiên, thân thiện với môi trường, an toàn cho sức khỏe.</p>
+                <div class="group-xl group-middle d-md-flex justify-content-md-between wow fadeInRight" data-wow-delay=".3s">
+                    <div>
+                        <div class="group-xl group-middle">
+                            <a class="button button-sm button-icon-3 button-secondary button-zakaria" asp-controller="EximaniAbout" asp-action="Index"><span class="mdi mdi-arrow-right"></span></a>
+                            <div class="team-navy">
+                                <div class="team-navy-name"><a asp-controller="EximaniAbout" asp-action="Index">Ms. Dung</a></div>
+                                <div class="team-navy-status">Founder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services-->
+<section class="parallax-container" style="font-family: " Lato", -apple-system, BlinkMacSystemFont, "Segoe UI" , Roboto, "Helvetica Neue" , Arial, sans-serif";>
+    <div class="parallax-content section-xxl context-dark">
+        <div class="container">
+            <div class="row row-30 box-ordered">
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/quality.svg" alt="quality" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a style="color: #f9520b;" href="#">An Toàn Sức Khỏe<br /></a></h4>
+                        <p class="box-icon-modern-text">
+                            @*With a team of professional staff, with long-term experience in the export field, we are committed to providing customers with the best service.*@
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/spchatluong.jpg" alt="spchatluong" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a href="#">Sản Phẩm Chất Lượng</a></h4>
+                        <p class="box-icon-modern-text">@*Ichi Handmade Products exported to foreign markets Eximani are always highly appreciated by partners for their quality, maintaining customers' faith in many parts of the world.*@</p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/price.png" alt="price" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a href="#">Giá Cạnh Tranh</a></h4>
+                        <p class="box-icon-modern-text">@*To be able to bring products abroad while ensuring the profitability of customers, we always provide products with the most suitable prices.*@</p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/process.jpg" alt="process" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a href="#">Quy Trình Chuẩn</a></h4>
+                        <p class="box-icon-modern-text">@*To ensure time delivery, we always find ways to optimize the process of applying for customs clearance at Vietnam Customs.*@</p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/hethongsxtt.jpg" alt="hethongsxtt" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a href="#">Hệ Thống Tiên Tiến</a></h4>
+                        <p class="box-icon-modern-text">@*In order to provide customers with the right quantity and quality, we have a system of factories with advanced technology in all provinces in Vietnam.*@</p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+                    <article class="box-icon-modern" style="text-align: center; !important">
+                        <div class="box-icon-modern-header">
+                            <img src="eximani-images/time.png" alt="time" style="height: 75px;">
+                        </div>
+                        <h4 class="box-icon-modern-title"><a href="#">Đồng Bộ</a></h4>
+                        <p class="box-icon-modern-text">@*Logistics system ensures product quality from the factory until the product reaches the customer*@</p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- New Products-->
+<section class="section section-xxl bg-default">
+    <div class="container">
+        <h4 class="title-style-1 wow fadeInLeft">We Deal In</h4>
+        <h2 class="wow fadeScale">Products</h2>
+        <div class="isotope-wrap">
+            <div class="row row-30 row-lg-50 isotope">
+                @foreach (var prodCate in Model)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 isotope-item" data-filter="Type 1" style="min-height: 466px">
+                        <!-- Product-->
+                        <article class="product  wow fadeInRight">
+                            <div class="product-body">
+                                <div class="product-figure">
+                                    <a
+                                       href="@prodCate.ListExhibitProduct.First().LinkDetailProduct"
+                                       title="@prodCate.ListExhibitProduct.First().ProductName">
+                                        <img id="@("img-product-preview-category-"+prodCate.CategoryId)"
+                                             src="@prodCate.ListExhibitProduct.First().UrlMainImage"
+                                             alt="@prodCate.ListExhibitProduct.First().ProductName"
+                                             title="@prodCate.ListExhibitProduct.First().ProductName" />
+                                    </a>
+                                </div>
+                                <h5 class="product-title"><a>@prodCate.CategoryName</a></h5>
+                            </div>
+                            <div class="sub-product-image-container">
+                                @for (var i = 0; i < prodCate.ListExhibitProduct.Count(); i++)
+                                {
+                                    <a href="@prodCate.ListExhibitProduct[i].LinkDetailProduct"
+                                       class="sub-img @(@i == 0 ? "sub-img-focus" : "")"
+                                       categoryId="@prodCate.CategoryId"
+                                       productName="@prodCate.ListExhibitProduct[i].ProductName"
+                                       title="@prodCate.ListExhibitProduct[i].ProductName"
+                                       >
+                                        <img 
+                                             class="img-mini-preview" 
+                                             src="@prodCate.ListExhibitProduct[i].UrlMainImage"
+                                             alt="@prodCate.ListExhibitProduct[i].ProductName"
+                                             title="@prodCate.ListExhibitProduct[i].ProductName"/>
+                                    </a>
+                                }
+                            </div>
+                            <div class="product-button-wrap">
+                                <a id="@("product-name-"+prodCate.CategoryId)"
+                                   href="@prodCate.ListExhibitProduct.First().LinkDetailProduct"
+                                   title="@prodCate.ListExhibitProduct.First().ProductName"
+                                   >
+                                    @prodCate.ListExhibitProduct.First().ProductName
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our clients-->
+<section class="section section-xxl bg-image-3 image-decor-wrap">
+    <div class="container">
+        <h4 class="title-style-1 wow fadeInRight">Latest Testimonials</h4>
+        <h2 class="wow fadeScale" style="color: #FFF">Our clients</h2>
+        <!-- Owl Carousel-->
+        <div class="owl-carousel owl-style-3" data-items="1" data-margin="200" data-autoplay="true" data-nav="true" data-dots="true" data-smart-speed="400" data-animation-in="fadeIn" data-animation-out="fadeOut">
+            <!-- Quote Modern-->
+            <article class="quote-modern quote-modern-2">
+                <div class="quote-modern-text">
+                    <div class="q">Sản phẩm chất lượng, mình rất thích hương thơm của trầm</div>
+                </div>
+                <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+                    <div class="unit-left">
+                        <div class="quote-modern-figure">
+                            <img src="eximani-images/user-11-62x62.jpg" alt="user-11-62x62" width="62" height="62" />
+                        </div>
+                    </div>
+                    <div class="unit-body">
+                        <div class="quote-modern-author">Nguyễn Sơn,</div>
+                        <div class="quote-modern-status">Hà Nội.</div>
+                    </div>
+                </div>
+            </article>
+            <!-- Quote Modern-->
+            <article class="quote-modern quote-modern-2">
+                <div class="quote-modern-text">
+                    <div class="q">Tôi chọn sản phẩm của Ichi Handmade vì nó thân thiện với môi trường, an toàn cho sức khỏe và đặc biệt là mình đang có con nhỏ, dùng xà bông của Ichi bé rất thích và thơm nữa.</div>
+                </div>
+                <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+                    <div class="unit-left">
+                        <div class="quote-modern-figure">
+                            <img src="eximani-images/user-10-62x62.jpg" alt="user-10-62x62" width="62" height="62" />
+                        </div>
+                    </div>
+                    <div class="unit-body">
+                        <div class="quote-modern-author">Nguyên Thị Thu</div>
+                        <div class="quote-modern-status">Đà Nẵng</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="quote-modern quote-modern-2">
+                <div class="quote-modern-text">
+                    <div class="q">Mình dùng nụ trầm hương của nhiều bên rồi nhưng lần đầu tiên thấy ưng ý, mùi nụ trầm hương của Ichi Handmade rất thoải mái, dễ chịu, đặc biệt ấm người.</div>
+                </div>
+                <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+                    <div class="unit-left">
+                        <div class="quote-modern-figure">
+                            <img src="eximani-images/user-6-62x62.jpg" alt="user-6-62x62" width="62" height="62" />
+                        </div>
+                    </div>
+                    <div class="unit-body">
+                        <div class="quote-modern-author">Giang</div>
+                        <div class="quote-modern-status">Hồ Chí Minh</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Quote Modern-->
+            <article class="quote-modern quote-modern-2">
+                <div class="quote-modern-text">
+                    <div class="q">Mình bị bệnh về da nên việc sử dụng xà bông luôn phải hạn chế hoặc lựa chọn thật kĩ, nhưng khi dùng của Ichi Handmade mình thấy rất an toàn, đảm bảo.</div>
+                </div>
+                <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+                    <div class="unit-left">
+                        <div class="quote-modern-figure">
+                            <img src="eximani-images/user-6-62x62.jpg" alt="user-6-62x62" width="62" height="62" />
+                        </div>
+                    </div>
+                    <div class="unit-body">
+                        <div class="quote-modern-author">Anh Quân</div>
+                        <div class="quote-modern-status">Hà Đông</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+</section>
+<!-- Banner-->
+<!-- Section Product and Clients-->
+<section class="section section-sm section-first bg-default text-md-left">
+    <div class="container">
+        <div class="row row-30 justify-content-center align-items-md-center">
+            <div class="col-sm-8 col-md-5 col-xl-6">
+                <div class="inset-xl-right-20">
+                    <div class="product-wrap-1 bg-image-1 block-1">
+                        <!-- Owl Carousel-->
+                        <div class="owl-carousel owl-style-5" data-items="1" data-margin="30" data-dots="true" data-autoplay="true">
+                            <article class="product-creative">
+                                <div class="product-figure">
+                                    <img src="~/eximani-images/nu-tram-cua-ichi-handmade.jpg" alt="nu-tram-huong" title="Nụ trầm hương sạch" width="470" height="324" />
+                                </div>
+                                <h4 class="product-creative-title"><a href="" title="Nụ trầm hương tư nhiên">Nụ Trầm Hương</a></h4>
+                                <div class="product-creative-price-wrap">
+                                </div>
+                            </article>
+                            <article class="product-creative">
+                                <div class="product-figure">
+                                    <img src="~/eximani-images/xam-bong-tu-nhien.jpg" alt="cassia" title="Cassia" width="470" height="324" />
+                                </div>
+                                <h4 class="product-creative-title"><a href="" title="Xà Bông"></a>Lá Xanh</h4>
+                                <div class="product-creative-price-wrap">
+                                </div>
+                            </article>
+
+                            <article class="product-creative">
+                                <div class="product-figure">
+                                    <img src="~/eximani-images/xa-bong-tu-nhien-sach.jpg" alt="Xà bông mật đất" title="Xà bông mật đất" width="470" height="324" />
+                                </div>
+                                <h4 class="product-creative-title"><a href="" title="Xà bông mật đất">Mật Đất</a></h4>
+                                <div class="product-creative-price-wrap">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-xl-6">
+                <h4 class="title-style-1 wow fadeInRight">Tại sao nên sử dụng ICHI ??</h4>
+                <h2 class="text-spacing-20 wow fadeInRight" data-wow-delay=".1s">ICHI tốt nhất</h2>
+                <!-- Bootstrap collapse-->
+                <div class="card-group-custom card-group-custom-1 card-group-corporate" id="accordion1" role="tablist" aria-multiselectable="false">
+                    <!-- Bootstrap card-->
+                    <article class="card card-custom card-corporate wow fadeInRight" data-wow-delay=".2s">
+                        <div class="card-header" role="tab">
+                            <div class="card-title">
+                                <a id="accordion1-card-head-vinxbnny" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-pxkhxtgg" aria-controls="accordion1-card-body-pxkhxtgg" aria-expanded="true" role="button">
+                                    Sứ Mệnh
+                                    <div class="card-arrow">
+                                        <div class="icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse show" id="accordion1-card-body-pxkhxtgg" aria-labelledby="accordion1-card-head-vinxbnny" data-parent="#accordion1" role="tabpanel">
+                            <div class="card-body">
+                                <p>"Cung cấp sản phẩm sạch, thơm, 100% tự nhiên và tốt cho sức khỏe người tiêu dùng với giá tốt."</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Bootstrap card-->
+                    <article class="card card-custom card-corporate wow fadeInRight" data-wow-delay=".3s">
+                        <div class="card-header" role="tab">
+                            <div class="card-title">
+                                <a class="collapsed" id="accordion1-card-head-jaaceytc" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-krbiajls" aria-controls="accordion1-card-body-krbiajls" aria-expanded="false" role="button">
+                                    Tầm Nhìn
+                                    <div class="card-arrow">
+                                        <div class="icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse" id="accordion1-card-body-krbiajls" aria-labelledby="accordion1-card-head-jaaceytc" data-parent="#accordion1" role="tabpanel">
+                            <div class="card-body">
+                                <p>ICHI HANDMADE mục tiêu trở thành doanh nnghiệp chuyên sản xuất, phân phối các sản phẩm làm từ 100% tự nhiên, không chứa hóa chất, tốt cho sức khỏe con người.</p>
+                                <p>Chúng tôi có một khát khao là đưa các sản phẩm làm từ 100% tự nhiên như: Nụ trầm hương, xà bông, dầu gội với chất lượng tuyệt hảo cùng giá cả cạnh tranh đến tay người tiêu dùng toàn cầu.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Bootstrap card-->
+                    <article class="card card-custom card-corporate wow fadeInRight" data-wow-delay=".4s">
+                        <div class="card-header" role="tab">
+                            <div class="card-title">
+                                <a class="collapsed" id="accordion1-card-head-vikedqad" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-wgyktlpb" aria-controls="accordion1-card-body-wgyktlpb" aria-expanded="false" role="button">
+                                    Tại sao chọn ICHI?
+                                    <div class="card-arrow">
+                                        <div class="icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse" id="accordion1-card-body-wgyktlpb" aria-labelledby="accordion1-card-head-vikedqad" data-parent="#accordion1" role="tabpanel">
+                            <div class="card-body">
+                                <h5>&quot;GOOD PRODUCT, GOOD SERVICE&quot;</h5>
+                                <p></p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Blog-->
+
+<section class="section">
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="1200" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=101%20usilk&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a><br>
+    <style>
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 500px;
+            width: 100%;
+        }
+    </style><a href="https://www.embedgooglemap.net"></a>
+    <style>
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style></div></div>
+    <!-- RD Google Map-->
+    @*<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14765.054604550196!2d70.7688101!3d22.3058665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe417be0259c2f47!2sJasal%20Complex!5e0!3m2!1sen!2sin!4v1594985253132!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>*@
+    @*<div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="1200" height="500" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1437767637212!2d105.85712761404584!3d21.026932385999395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab82aa3ac5db%3A0x3d25c838e60257c9!2sEximani%20Vietnam%20Co%20Ltd!5e0!3m2!1svi!2s!4v1618386552949!5m2!1svi!2s" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies2.org"></a><br>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 100%;
+                    }
+                </style>
+                <style>
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                </style>
+            </div>
+        </div>*@
+    @*<div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="1200" height="500" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1437767637212!2d105.85712761404584!3d21.026932385999395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab82aa3ac5db%3A0x3d25c838e60257c9!2sEximani%20Vietnam%20Co%20Ltd!5e0!3m2!1svi!2s!4v1618386552949!5m2!1svi!2s" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies2.org"></a><br>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 100%;
+                    }
+                </style>
+                <style>
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                </style>
+            </div>
+        </div>*@
+
+
+</section>
+<div class="snackbars" id="form-output-global"></div>

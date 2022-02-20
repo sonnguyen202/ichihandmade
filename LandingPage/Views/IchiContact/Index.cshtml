@@ -1,0 +1,111 @@
+﻿@model ReCaptcha 
+<section class="breadcrumbs-custom">
+    <div class="parallax-container" data-parallax-img="eximani-images/ichihandmade-san-pham-tu-nhien-lien-he.jpg">
+        <div class="breadcrumbs-custom-body parallax-content context-dark">
+            <div class="container">
+                <h1 style="font-size: 55px; font-weight: 600" class="breadcrumbs-custom-title">LIÊN HỆ</h1>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs-custom-footer">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a asp-controller="Home" asp-action="Index">TRANG CHỦ</a></li>
+                <li class="active">LIÊN HỆ</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Get in touch-->
+<section class="section section-xl bg-default text-md-left">
+    <div class="container">
+        <div class="title-classic">
+            <h3 class="title-classic-title">LIÊN HỆ NGAY</h3>
+            <p class="title-classic-subtitle">Chúng tôi luôn sẵn sàng hỗ trợ, tư vấn 24/7. Quý khách chỉ cần để lại<br class="d-none d-lg-block">thông tin dưới form sau hoặc gọi ngay 0932 233 028.</p>
+        </div>
+        <div id="contact-form" class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact">
+            <div class="row row-20 row-md-30">
+                <div class="col-lg-8">
+                    <div class="row row-20 row-md-30">
+                        <div class="col-sm-6">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-first-name-2" type="text" name="firstName" />
+                                <label class="form-label" for="contact-first-name-2">Họ</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-last-name-2" type="text" name="lastName" />
+                                <label class="form-label" for="contact-last-name-2">Tên</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-email-2" type="email" name="email" />
+                                <label class="form-label" for="contact-email-2">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-phone-2" type="text" name="phoneNumber" />
+                                <label class="form-label" for="contact-phone-2">Điện thoại</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-wrap">
+                        <label class="form-label" for="contact-message-2">Nội dung liên hệ</label>
+                        <textarea class="form-input textarea-lg" id="contact-message-2" name="message"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 20px" id="dvCaptcha"></div>
+            <input type="hidden" id="hfCaptcha" />
+            <span id="rfvCaptcha" class="error" style="display:none;color: red;">Captcha validation is required.</span>
+            <br />
+            <button id="btn-contact-submit" class="button button-lg button-secondary button-zakaria">Gửi Liên Hệ</button>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script>
+        $(".rd-navbar-nav").children().removeClass("active");
+        $(".rd-navbar-nav li:nth-child(6)").addClass("active");
+    </script>
+    <script>
+        var onloadCallback = function () {
+            grecaptcha.render('dvCaptcha', {
+                'sitekey': '@Model.SiteKey',
+                'callback': function (response) { 
+                    var captchaReponse = {
+                        response: response
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "/IchiContact/VerifyResponseCaptcha",
+                        data: JSON.stringify(captchaReponse),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (r) {
+                            var captchaResponse = jQuery.parseJSON(r.response);
+                            if (captchaResponse.success) {
+                                $("#btn-contact-submit").prop('disabled', false);
+                                $("#hfCaptcha").val(captchaResponse.success);
+                                $("#rfvCaptcha").hide();
+                            } else {
+                                $("#btn-contact-submit").prop('disabled', true);
+                                $("#hfCaptcha").val("");
+                                $("#rfvCaptcha").show();
+                                var error = captchaResponse["error-codes"][0];
+                                $("#rfvCaptcha").html("RECaptcha error. " + error);
+                            }
+                        }c
+                    });
+                }
+            });
+        };
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="~/js/contact.js"></script>
+}
