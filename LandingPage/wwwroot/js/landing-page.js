@@ -41,7 +41,7 @@
             try {
                 $.ajax({
                     type: 'POST',
-                    url: '/EximaniContact/ReceiveContact',
+                    url: '/IchiContact/ReceiveContact',
                     contentType: "application/json",
                     data: JSON.stringify(contact),
                     async: false,

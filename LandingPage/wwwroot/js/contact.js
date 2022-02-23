@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $('#btn-contact-submit').on("click", function () {
+        debugger
         $("#btn-contact-submit").prop('disabled', true);
         var resultValidate = validateForm();
         if (resultValidate == null) {
@@ -12,7 +13,7 @@
             try {
                 $.ajax({
                     type: 'POST',
-                    url: '/EximaniContact/ReceiveContact',
+                    url: '/IchiContact/ReceiveContact',
                     contentType: "application/json",
                     data: JSON.stringify(contact),
                     async: false,
@@ -20,7 +21,7 @@
                         if (res.status == 200) {
                             $("#btn-contact-submit").prop('disabled', false);
                             alert("Success");
-                            window.location = "/EximaniContact"
+                            window.location = "/IchiContact"
                         } else {
                             alert("Error! An error occurred. Please try again later");
                         }
@@ -42,11 +43,12 @@
     });
 
     function validateForm() {
+        debugger
         var firstName = $("#contact-first-name-2").val();
         var lastName = $("#contact-last-name-2").val();
         var email = $("#contact-email-2").val();
         var phoneNumber = $("#contact-phone-2").val();
-        var verifyRecaptchaStatus = $("#hfCaptcha").val();
+        //var verifyRecaptchaStatus = $("#hfCaptcha").val();
         //if (firstName == null || firstName.trim() == "") {
         //    return "First Name is required.";
         //} else if (lastName == null || lastName.trim() == "") {
@@ -60,10 +62,12 @@
             if (!validatePhoneNumber(phoneNumber)) {
                 return "PhoneNumber is not valid.";
             }
-        } if (verifyRecaptchaStatus == null || verifyRecaptchaStatus == "") {
-            $("#rfvCaptcha").show();
-            return "Captcha validation is required."
-        } else {
+        }
+        //if (verifyRecaptchaStatus == null || verifyRecaptchaStatus == "") {
+        //    $("#rfvCaptcha").show();
+        //    return "Captcha validation is required."
+        //}
+        else {
             return null;
         }
     }

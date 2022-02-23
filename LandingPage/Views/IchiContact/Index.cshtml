@@ -60,9 +60,9 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 20px" id="dvCaptcha"></div>
+            @*<div style="margin-top: 20px" id="dvCaptcha"></div>
             <input type="hidden" id="hfCaptcha" />
-            <span id="rfvCaptcha" class="error" style="display:none;color: red;">Captcha validation is required.</span>
+            <span id="rfvCaptcha" class="error" style="display:none;color: red;">Captcha validation is required.</span>*@
             <br />
             <button id="btn-contact-submit" class="button button-lg button-secondary button-zakaria">Gửi Liên Hệ</button>
         </div>
@@ -100,12 +100,12 @@
                                 var error = captchaResponse["error-codes"][0];
                                 $("#rfvCaptcha").html("RECaptcha error. " + error);
                             }
-                        }c
+                        }
                     });
                 }
             });
         };
     </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    @*<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>*@
     <script src="~/js/contact.js"></script>
 }
